@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/DepEmpPage.jsf" usageId="view_DepEmpPagePageDef"/>
+    <page path="/Query.jsf" usageId="view_QueryPageDef"/>
+    <page path="/view1.jsf" usageId="view_view1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_DepEmpPagePageDef" path="view.pageDefs.DepEmpPagePageDef"/>
+    <page id="view_QueryPageDef" path="view.pageDefs.QueryPageDef"/>
+    <page id="view_view1PageDef" path="view.pageDefs.view1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
